@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./GalleryStyling.css" />
+    <script src="./ImageNavigationLogic.js" defer></script>
+    <title>Image Gallery</title>
+  </head>
+  <body>
+    <div class="page-container">
+      <h1>Image Gallery</h1>
+
+      <div class="gallery-container">
+        <!-- Main Image -->
+        <div class="gallery">
+          <img
+            id="current-image"
+            src="images/1pcORCkn.jpg"
+            alt="Gallery Image"
+          />
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation">
+          <button id="prev-btn" data-action="prev">Prev</button>
+          <button id="next-btn" data-action="next">Next</button>
+        </div>
+
+        <!-- Thumbnail Image Gallery -->
+        <div class="thumbnail-container">
+          <div class="thumbnail-gallery" id="thumbnail-gallery">
+            <!-- Thumbnails will be dynamically generated here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Array of images
+      const images = [
+        { src: "images/1pcORCkn.jpg", alt: "Thumbnail 1" },
+        { src: "images/5pcsCknBucket.jpg", alt: "Thumbnail 2" },
+        { src: "images/20pcsNuggetsALC.jpg", alt: "Thumbnail 3" },
+        { src: "images/BBQPocBX.jpg", alt: "Thumbnail 4" },
+        { src: "images/1pcORCkn.jpg", alt: "Thumbnail 5" },
+        { src: "images/5pcsCknBucket.jpg", alt: "Thumbnail 6" },
+        { src: "images/20pcsNuggetsALC.jpg", alt: "Thumbnail 7" },
+        { src: "images/BBQPocBX.jpg", alt: "Thumbnail 8" },
+        // Add more images as needed
+      ];
+
+      // Select the current image and thumbnail gallery
+      const currentImage = document.getElementById("current-image");
+      const thumbnailGallery = document.getElementById("thumbnail-gallery");
+
+      // Function to dynamically generate thumbnails
+      function createThumbnails() {
+        images.forEach((image, index) => {
+          const thumbnail = document.createElement("img");
+          thumbnail.src = image.src;
+          thumbnail.alt = image.alt;
+          thumbnail.classList.add("thumbnail");
+          thumbnail.dataset.index = index;
+
+          // Click event to change main image when clicking thumbnail
+          thumbnail.addEventListener("click", function () {
+            currentImage.src = images[index].src;
+            currentImage.alt = images[index].alt;
+          });
+
+          // Append thumbnail to the gallery
+          thumbnailGallery.appendChild(thumbnail);
+        });
+      }
+
+      // Call the function to generate thumbnails
+      createThumbnails();
+    </script>
+  </body>
+</html>

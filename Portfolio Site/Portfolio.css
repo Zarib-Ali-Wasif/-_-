@@ -1,0 +1,188 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+nav {
+  background-color: #333;
+  padding: 15px;
+}
+
+nav h1 {
+  color: #fff;
+  display: inline-block;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-block;
+  float: right;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+.hero {
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  transition: transform 2s ease-in-out; /* Applying transform transition for smoother zoom */
+}
+
+.hero:hover {
+  transform: scale(1.1); /* Zooming in with scale */
+  opacity: 0.9; /* Optional fade effect */
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+.hero .btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #0056b3;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: space-around;
+  /* flex-wrap: nowrap; */
+}
+
+.skill {
+  background-color: #eeeeee;
+  padding: 0px 20px 0px 20px;
+  text-align: center;
+  border-radius: 8px;
+  border: solid 2px #ececec;
+  margin-bottom: -60px;
+}
+
+.project-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: -60px;
+}
+
+.project {
+  width: 30%;
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  flex: 1;
+  margin-right: 0px;
+}
+
+.input-container:last-child {
+  margin-right: 0;
+}
+
+form input,
+form textarea {
+  width: 90%;
+}
+
+.btn {
+  width: 12%;
+  height: 50px;
+  margin-top: 20px;
+  font-size: medium;
+}
+
+#message {
+  color: black;
+  width: 95%;
+  margin-top: 10px;
+}
